@@ -1,0 +1,51 @@
+<form class="w-50 mx-auto p-4" name="frmLogin" id="frmLogin">
+  <caption>
+    <h1>Đăng Nhập ngay bây giờ</h1>
+  </caption>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example1">Đăng nhập tài khoản</label>
+    <input id="form3Example3c" class="form-control" ng-model="username" name="username" ng-model="username" type="text"
+      id="username" required />
+    <small ng-show="frmLogin.username.$invalid" id="username" class="form-text text-danger">Vui lòng nhập tài
+      khoản</small>
+
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example2">Password</label>
+    <input type="password" id="form3Example4c3" ng-model="password" name="password" class="form-control" required
+      minlength="6" />
+    <small ng-show="frmLogin.password.$error.required" id="password" class="form-text text-danger">Vui lòng nhập mật
+      khẩu</small>
+    <small ng-show="frmLogin.password.$error.minlength" id="password" class="form-text text-danger">Mật khẩu phải hơn 6
+      kí tự</small>
+  </div>
+
+  <!-- 2 column grid layout for inline styling -->
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+      <!-- Checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+        <label class="form-check-label" for="form2Example31"> Remember me </label>
+      </div>
+    </div>
+
+    <div class="col">
+      <!-- Simple link -->
+      <a href="#!forgotpassword">Forgot password?</a>
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <button type="button" ng-click='login()' ng-disabled="frmLogin.$invalid" class="btn btn-primary btn-block mb-4">Đăng Nhập</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Not a member? <a href="#!CreateUser">Register</a></p>
+
+
+  </div>
+</form>

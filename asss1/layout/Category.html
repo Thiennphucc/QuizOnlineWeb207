@@ -1,0 +1,21 @@
+<h1 class="text-primary text-center">Danh Mục Bài Thi</h1>
+<div id="portfolio">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-lg-4 col-sm-6" ng-repeat="sj in subjects| limitTo:6:cout" >
+                <a class="portfolio-box" href="" title="Project Name">
+                    <img class="img w-100" style="transform: scale(0.7);" src="/asss1/img/logos/{{sj.Logo}}" alt="..." />
+                    <div class="portfolio-box-caption p-3">
+                        <div class="project-category text-white-50">{{sj.Name}}</div>
+                        <div class="project-name">Bài Thi Gồm đầy đủ các kiến thức đã học trong bộ môn {{sj.Name}}</div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+  <div class="d-grid gap-2 d-md-block text-center mt-5">
+    <button class="btn btn-primary" ng-click="prev()" type="button">Prev</button>
+    <button class="btn btn-primary" ng-click="next()" type="button">Next</button>
+  </div>

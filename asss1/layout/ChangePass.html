@@ -1,0 +1,39 @@
+<form class="w-50 mx-auto p-4"name="frmChangPass">
+    <caption>
+        <h1>Đổi mật khẩu</h1>
+    </caption>
+    <!-- Email input -->
+    <div class="form-outline mb-4" >
+        <label class="form-label" for="form3Example4c3">Nhập Mật Khẩu Cũ</label>
+        <input minlength="6" name="oldpassword" ng-model="oldpassword" check-old-password type="password"
+            id="oldpassword" class="form-control" required>
+        <small ng-show="frmChangPass.oldpassword.$error.required" id="oldpassword" class="form-text text-danger">Vui
+            lòng nhập mật khẩu cũ</small>
+        <small ng-show="frmChangPass.oldpassword.$error.customValidation" id="oldpassword"
+            class="form-text text-danger">Mật khẩu không đúng</small>
+    </div>
+    <div class="form-outline mb-4">
+        <label class="form-label" name="password">Mật Khẩu mới</label>
+        <input minlength="6" name="password" ng-model="studentR.password" type="password" class="form-control" required>
+        <small ng-show="frmChangPass.password.$error.required" class="form-text text-danger">Vui lòng nhập mật khẩu
+            mới</small>
+        <small ng-show="frmChangPass.password.$error.minlength" class="form-text text-danger">Mật khẩu phải hơn 6 kí
+            tự</small>
+    </div>
+    <div class="form-outline mb-4">
+        <label class="form-label" for="repassword">Nhập Lại Mật Khẩu</label>
+        <input name="renewpassword" ng-model="renewpassword" type="password" id="renewpassword" class="form-control"
+            required re-pass>   
+        <small ng-show="frmChangPass.renewpassword.$error.required" id="renewpassword1"
+            class="form-text text-danger">Vui lòng nhập lại mật khẩu</small>
+        <small ng-show="frmChangPass.renewpassword.$invalid && !frmChangPass.renewpassword.$error.required"
+            id="renewpassword2" class="form-text text-danger">Mật khẩu nhập lại không khớp</small>
+    </div>
+    <button type="button" ng-click="change()" ng-disabled="frmChangPass.$invalid"
+        class="btn btn-primary btn-block mb-4">Đổi mật khẩu </button>
+
+    <!-- Register buttons -->
+    <div class="text-center">
+        <p>Not a member? <a href="#!CreateUser">Register</a></p>
+    </div>
+</form>
